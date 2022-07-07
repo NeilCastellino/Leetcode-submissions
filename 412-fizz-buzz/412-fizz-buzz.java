@@ -1,6 +1,6 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         
         for(int i=1; i<=n; i++){
             if(i%3==0 && i%5==0)
@@ -10,7 +10,7 @@ class Solution {
             else if(i%5==0)
                 list.add("Buzz");
             else
-                list.add(Integer.toString(i));
+                list.add(String.valueOf(i));
         }
         return list;
     }
