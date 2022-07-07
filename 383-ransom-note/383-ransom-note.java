@@ -6,7 +6,7 @@ class Solution {
             if(!count.containsKey(c)){
                 count.put(c, 1);
             }else{
-                int val = count.get(c) + 1;
+                int val = count.getOrDefault(c,0) + 1;
                 count.put(c, val);
             }
         }
