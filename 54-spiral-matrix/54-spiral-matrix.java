@@ -12,26 +12,22 @@ class Solution {
                 res.add(matrix[up][i]);
             }
             
-            
-                for(int i=up+1; i<=down; i++){
-                    res.add(matrix[i][right]);
-                }
+            for(int i=up+1; i<=down; i++){
+                res.add(matrix[i][right]);
+            }
                 
-            
-            
             if(up!=down){
                 for(int i=right-1; i>=left; i--){
                     res.add(matrix[down][i]);
                 }
-                
             }
             
             if(left!=right){
                 for(int i=down-1; i>=up+1; i--){
                     res.add(matrix[i][left]);
                 }
-                
             }
+            
             up++;
             right--;
             down--;
