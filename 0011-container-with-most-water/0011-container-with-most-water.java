@@ -5,7 +5,9 @@ class Solution {
         int high = height.length - 1;
         
         while(low<high){
-            maxVolume = Math.max(maxVolume, (high-low) * Math.min(height[low],height[high]));
+            int minHeight = (height[low]<height[high])? height[low]:height[high];
+            int area = (high-low) * minHeight;
+            maxVolume = (maxVolume>area)? maxVolume:area;
             
             if(height[low]<height[high])
                 low++;
