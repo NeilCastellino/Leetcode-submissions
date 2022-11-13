@@ -4,11 +4,9 @@ class Solution {
         int high = numbers.length-1;
         
         while(low<high){
-            int sum = numbers[low]+numbers[high];
-            
-            if(sum==target){
+            if(numbers[low]+numbers[high] == target){
                 return new int[]{low+1, high+1};
-            }else if(sum<target)
+            }else if(numbers[low]+numbers[high] < target)
                 low++;
             else
                 high--;
